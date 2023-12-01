@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.5 on win32)" generated="20230925 17:45:11.842" rpa="false" schemaversion="4">
+<suite id="s1" name="TC 25" source="D:\Selenium\LeThiHoangPhung_SourceCodeDemo\TC_25.robot">
+<test id="s1-t1" name="TC_24 Verify that User can add favorite space" line="13">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Open Browser</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230925 17:45:16.468" endtime="20230925 17:45:16.469"/>
+</kw>
+<kw name="Open Browser Spaces" library="web">
+<arg>${link}</arg>
+<status status="PASS" starttime="20230925 17:45:16.470" endtime="20230925 17:45:22.527"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>1. Login with Account TMA</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230925 17:45:22.528" endtime="20230925 17:45:22.528"/>
+</kw>
+<kw name="Login Spaces" library="web">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<msg timestamp="20230925 17:45:41.538" level="INFO">Login successfully!!!</msg>
+<msg timestamp="20230925 17:45:44.539" level="INFO">&lt;bound method testworkspaces.take_screenshot of &lt;testworkspaces.testworkspaces object at 0x0000028C42805210&gt;&gt;</msg>
+<status status="PASS" starttime="20230925 17:45:22.529" endtime="20230925 17:45:44.539"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>2. Create Group Space</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230925 17:45:44.539" endtime="20230925 17:45:44.540"/>
+</kw>
+<kw name="Create Spaces" library="web">
+<arg>${namespace}</arg>
+<msg timestamp="20230925 17:45:57.310" level="INFO">Create Group Space Successfully !</msg>
+<status status="PASS" starttime="20230925 17:45:44.540" endtime="20230925 17:45:57.310"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>3. Add favorite space</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230925 17:45:57.311" endtime="20230925 17:45:57.311"/>
+</kw>
+<kw name="Add Favorite" library="web">
+<msg timestamp="20230925 17:45:59.702" level="INFO">Clicked element //div[@class='drop-down-menu restore-menu show-arrow']</msg>
+<msg timestamp="20230925 17:46:01.770" level="INFO">Clicked element //span[contains(text(),'Favorite this Space')]</msg>
+<status status="PASS" starttime="20230925 17:45:57.312" endtime="20230925 17:46:01.770"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>4. Verify add favorite space</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230925 17:46:01.771" endtime="20230925 17:46:01.771"/>
+</kw>
+<kw name="Verify Add Favorite" library="web">
+<arg>${namespace}</arg>
+<msg timestamp="20230925 17:46:04.799" level="INFO">Taking screenshot...</msg>
+<msg timestamp="20230925 17:46:04.799" level="INFO">screenshot_name: D:/Python_example/selenium/Selenium/LOGS/screenshots/2023-09-25-17-46-04.798506.png</msg>
+<msg timestamp="20230925 17:46:04.799" level="INFO">save_dir: &lt;a href="../screenshots/2023-09-25-17-46-04.798506.png"&gt; Link to Image &lt;/a&gt;</msg>
+<msg timestamp="20230925 17:46:04.951" level="INFO">Take screenshot successfully with path: D:/Python_example/selenium/Selenium/LOGS/screenshots/2023-09-25-17-46-04.798506.png</msg>
+<msg timestamp="20230925 17:46:04.951" level="INFO" html="true">&lt;img src="../screenshots/2023-09-25-17-46-04.798506.png" alt="../screenshots/2023-09-25-17-46-04.798506.png" width="80%"&gt;</msg>
+<msg timestamp="20230925 17:46:04.951" level="INFO" html="true">&lt;img src="D:/Python_example/selenium/Selenium/LOGS/screenshots/2023-09-25-17-46-04.798506.png" alt="D:/Python_example/selenium/Selenium/LOGS/screenshots/2023-09-25-17-46-04.798506.png 1" width="80%"&gt;</msg>
+<msg timestamp="20230925 17:46:04.952" level="INFO">&lt;D:/Python_example/selenium/Selenium/LOGS/screenshots/2023-09-25-17-46-04.798506.png&gt;</msg>
+<msg timestamp="20230925 17:46:04.952" level="INFO">D:/Python_example/selenium/Selenium/LOGS/screenshots/2023-09-25-17-46-04.798506.png</msg>
+<status status="PASS" starttime="20230925 17:46:01.771" endtime="20230925 17:46:04.952"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>4. Delete Space</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230925 17:46:04.952" endtime="20230925 17:46:04.953"/>
+</kw>
+<kw name="Delete Space" library="web">
+<msg timestamp="20230925 17:46:06.995" level="INFO">Clicked element //div[@class='drop-down-menu restore-menu show-arrow']</msg>
+<msg timestamp="20230925 17:46:09.250" level="INFO">Clicked element //span[contains(text(),'Edit space')]</msg>
+<msg timestamp="20230925 17:46:11.718" level="INFO">Clicked element //div[@class='space-options-with-confirm__ask-confirm space-options-with-confirm__ask-confirm--red']</msg>
+<msg timestamp="20230925 17:46:17.480" level="INFO">Delete Space successfully !</msg>
+<status status="PASS" starttime="20230925 17:46:04.954" endtime="20230925 17:46:17.480"/>
+</kw>
+<kw name="Run Keyword If Test Failed" library="BuiltIn" type="TEARDOWN">
+<arg>clean_up</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" starttime="20230925 17:46:17.482" endtime="20230925 17:46:17.482"/>
+</kw>
+<status status="PASS" starttime="20230925 17:45:16.466" endtime="20230925 17:46:17.483"/>
+</test>
+<status status="PASS" starttime="20230925 17:45:11.844" endtime="20230925 17:46:19.544"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC 25">TC 25</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
